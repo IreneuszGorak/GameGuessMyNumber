@@ -1,0 +1,32 @@
+{
+  "name": "guess_my_number_game",
+  "version": "1.0.0",
+  "description": "website portfolio for my son",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass souruce/sass/main.scss build/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IreneuszGorak/website-hairdresser-mscice.git"
+  },
+  "author": "Ireneusz Gorak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IreneuszGorak/website-hairdresser-mscice/issues"
+  },
+  "homepage": "https://github.com/IreneuszGorak/website-hairdresser-mscice#readme",
+  "dependencies": {
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "node": "^18.5.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "gulp-rename": "^2.0.0",
+    "postcss": "^8.4.14",
+    "sass": "^1.53.0"
+  }
+}
