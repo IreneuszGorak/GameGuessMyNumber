@@ -30,22 +30,66 @@
 }
 
 .game-values {
+  padding-top: 9.6rem;
   display: grid;
-  grid-template-columns: 2;
+  grid-template-columns: 1fr 1fr;
   justify-items: center;
   align-items: center;
 
   &__player {
+    // background-color: yellow;
+    width: 40rem;
+    height: 40rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+
+    gap: 3.2rem;
+
+    font-size: 2.2rem;
+
+    &__info-panel {
+      padding-bottom: 3.2rem;
+      text-align: center;
+    }
+
     &-input {
       display: block;
-      width: 8rem;
+      width: 12rem;
+      margin: 0 auto;
       height: 4rem;
       border: 2px solid $white;
+      text-align: center;
+      font-size: 2.2rem;
+      padding: 2rem 3rem;
+      margin-bottom: 3.2rem;
+      font-family: "Press Start 2P", cursive, sans-serif;
+    }
+
+    &-btn-check {
+      margin: 0 auto;
     }
   }
 
   &__table-score {
+    //background-color: blue;
+    width: 30rem;
+    height: 20rem;
+
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-self: center;
+
+    gap: 3.2rem;
+
+    font-size: 2.2rem;
+    text-align: center;
+
+    &__score {
+      padding-top: 6.2rem;
+    }
   }
 }

@@ -5,14 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inter:wght@400;700&family=Nunito+Sans:ital,wght@0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,900;1,600;1,700&family=Roboto+Mono:wght@300;400;700&family=Roboto:wght@500&display=swap"
-      rel="stylesheet"
-    />
 
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
 
     <title>Guess My Number</title>
   </head>
@@ -34,21 +32,21 @@
       </section>
 
       <section class="game-values">
-        <div class="game-vaules__player">
-          <span class="game-values__player-input"></span>
+        <div class="game-values__player">
+          <input class="game-values__player-input"></input>
+          <p class="game-values__player__info-panel info-panel">Start guessing ...</p>
           <button class="btn-main game-values__player-btn-check" type="button">
             Check !
           </button>
         </div>
 
         <div class="game-values__table-score">
-          <span class="game-values__table-score__info-panel"
-            >Start guessing ...</span
-          >
-          <span class="game-values__table-score__score"> Score: 20</span>
-          <span class="game-values__table-score__highscore">Highscore: 0</span>
+
+          <p class="game-values__table-score__score"> Score: <span class="score">20</span></p>
+          <p class="game-values__table-score__highscore">Highscore: <span class="highscore">0</span></p>
         </div>
       </section>
     </main>
+    <script src="/script/script.js"></script>
   </body>
 </html>
