@@ -1,0 +1,55 @@
+
+
+
+/* //Media Querry Manager
+87em  1392px big- extra extra large      
+75  1200px    xl - extra large
+62  992px     lg - large
+48  768px     sm - medium
+36  576px     xs - small
+
+*/
+
+@mixin respond($breakpoint) {
+
+
+  @if $breakpoint == supersmall {
+    @media (max-height:21em) { @content; }
+  }
+
+  @if $breakpoint == vertmode{
+    @media all and (max-device-width: 768px) and (orientation: landscape) { @content; }
+  }
+  @if $breakpoint == sxs {
+    @media (max-width:24em) { @content; }
+  }
+  @if $breakpoint == xs {
+      @media (max-width: 36em) { @content; }
+    }
+
+    @if $breakpoint == sm {
+      @media (max-width: 48em) { @content; }
+    }
+
+    @if $breakpoint == lg {
+      @media (max-width: 62em) {@content;}
+    }
+
+    @if $breakpoint == xl {
+      @media (max-width: 75em) {@content;}
+    }
+
+    @if $breakpoint == big {
+      @media (max-width: 87em) {@content;}
+    }
+
+
+
+}
+
+
+/* // how we use - in element:
+   @include respond(tab-land) {
+    finst-size:12rem;
+   }
+   */

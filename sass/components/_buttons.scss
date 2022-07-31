@@ -1,0 +1,11 @@
+.btn-main {
+  padding: 1.2rem 3rem;
+  font-size: 2rem;
+  border: none;
+  border-radius: 3px;
+
+  &:hover {
+    background-color: $green-tint;
+    color: $white;
+  }
+}

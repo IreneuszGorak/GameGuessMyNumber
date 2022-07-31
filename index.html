@@ -5,37 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inter:wght@400;700&family=Nunito+Sans:ital,wght@0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,900;1,600;1,700&family=Roboto+Mono:wght@300;400;700&family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+
     <title>Guess My Number</title>
   </head>
 
-  <header>
-    <button class="Again" type="button">Again!</button>
-    <span>Between 1 and 20</span>
-  </header>
+  <body>
+    <header class="header">
+      <button class="btn-main again" type="button">Again!</button>
+      <span>Between 1 and 20</span>
+    </header>
 
-  <main>
-    <section class="title">
-      <h1>Guess My Number !</h1>
-      <span class="line-left"></span>
-      <span class="secret-number"> ? </span>
-      <span class="line-right"></span>
-    </section>
+    <main>
+      <section class="title">
+        <h1 class="title-h1">Guess My Number !</h1>
+        <div class="title-container">
+          <span class="title-container__line-left"></span>
+          <span class="title-container__secret-number">?</span>
+          <span class="title-container__line-right"></span>
+        </div>
+      </section>
 
-    <section class="game-values">
-      <div class="game-vaules__player">
-        <span class="game-values__player-input"></span>
-        <button class="game-values__player-btn-check" type="button">
-          Check !
-        </button>
-      </div>
+      <section class="game-values">
+        <div class="game-vaules__player">
+          <span class="game-values__player-input"></span>
+          <button class="btn-main game-values__player-btn-check" type="button">
+            Check !
+          </button>
+        </div>
 
-      <div class="game-values__table-score">
-        <span class="game-values__table-score__info-panel"></span>
-        <span class="game-values__table-score__score"></span>
-        <span class="game-values__table-score__highscore"></span>
-      </div>
-    </section>
-  </main>
-
-  <body></body>
+        <div class="game-values__table-score">
+          <span class="game-values__table-score__info-panel"
+            >Start guessing ...</span
+          >
+          <span class="game-values__table-score__score"> Score: 20</span>
+          <span class="game-values__table-score__highscore">Highscore: 0</span>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
