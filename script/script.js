@@ -1,18 +1,24 @@
 "use strict";
 
+
+
+//function from MDM web docs 
+//https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+
+function infoPanel(message) {
+  document.querySelector('.info-panel').textContent = message;
+};
+
+
 let secretNumber=getRandomIntInclusive(1,20);
 let score=20;
 let highscore=0;
-
-// document.querySelector('.score').textContent = '5';
-// document.querySelector('.highscore').textContent = '35';
-// document.querySelector('.info-panel').textContent = 'Sialala';
 
 
 // checking the enetered value
@@ -23,9 +29,9 @@ let checkNumber=Number((document.querySelector('.game-values__player-input').val
 
 if  (checkNumber>0 && checkNumber<21) {
 
-    //winning
+    //victory
     if (checkNumber===secretNumber) { 
-      document.querySelector('.info-panel').textContent = 'Congratulations !';
+      infoPanel('Congratulations!');
       document.querySelector('.title-container__secret-number').textContent = secretNumber;
       score > highscore ? document.querySelector('.highscore').textContent = score : '';
       document.querySelector('body').style.backgroundColor = '#60b347';
@@ -34,8 +40,8 @@ if  (checkNumber>0 && checkNumber<21) {
     } else {
 
       checkNumber > secretNumber  ?     
-      document.querySelector('.info-panel').textContent = ' Number too high' : 
-      document.querySelector('.info-panel').textContent = ' Number too low'; 
+      infoPanel('Number too high') : 
+      infoPanel('Number too low');
       score--;
       document.querySelector('.score').textContent = score;
 
@@ -43,7 +49,7 @@ if  (checkNumber>0 && checkNumber<21) {
 
     //not number
   } else {
-    document.querySelector('.info-panel').textContent = '⛔️ No number!';
+    infoPanel('⛔️ No number!');
 
   };
 
@@ -52,7 +58,7 @@ if  (checkNumber>0 && checkNumber<21) {
 // again 
 document.querySelector('.again').addEventListener('click', function () {
   secretNumber=getRandomIntInclusive(1,20);
-  document.querySelector('.info-panel').textContent = 'Start guessing ...';
+  infoPanel('Start guessing ...');
   score=20;
   document.querySelector('.score').textContent = score;
   document.querySelector('body').style.backgroundColor = '#112240';
