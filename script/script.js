@@ -1,7 +1,5 @@
 "use strict";
 
-
-
 //function from MDM web docs 
 //https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 function getRandomIntInclusive(min, max) {
@@ -56,7 +54,7 @@ if  (checkNumber>0 && checkNumber<21) {
 });
 
 // again 
-document.querySelector('.again').addEventListener('click', function () {
+  document.querySelector('.again').addEventListener('click', function () {
   secretNumber=getRandomIntInclusive(1,20);
   infoPanel('Start guessing ...');
   score=20;
